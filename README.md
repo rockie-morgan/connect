@@ -30,6 +30,9 @@ download on Getty Images using an active download agreement.
 - **[<code>POST</code> GetLargestImageDownloadAuthorizations](https://github.com/gettyimages/connect/tree/master/documentation/endpoints/download/GetLargestImageDownloadAuthorizations.md)**
 - **[<code>POST</code> CreateDownloadRequest](https://github.com/gettyimages/connect/tree/master/documentation/endpoints/download/CreateDownloadRequest.md)**
 
+###Countries
+- **[<code>GET</GET> GetCountries](https://connect.gettyimages.com/swagger/ui/index.html#!/Countries)**
+
 ###Lightbox operations
 - **[<code>POST</code> CreateLightbox] (https://github.com/gettyimages/connect/blob/master/documentation/endpoints/lightbox/CreateLightbox.md)**
 - **[<code>POST</code> GetLightbox] (https://github.com/gettyimages/connect/blob/master/documentation/endpoints/lightbox/GetLightbox.md)**
