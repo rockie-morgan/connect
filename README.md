@@ -56,6 +56,7 @@ This page describes Connect version 3.0. <a href="v2/README.md" target="_blank">
 ## Connect Overview
 
 - [Current Version](#current-version)
+- [Accept-Language](#accept-language)
 - [Authentication](#authentication)
 - [Authorization](#authorization)
 - [Request Throttling](#request-throttling)
@@ -74,6 +75,12 @@ This page describes Connect version 3.0. <a href="v2/README.md" target="_blank">
 Connect is currently at version 3. Use the following base URI to access version 3 endpoints.
 
     https://connect.gettyimages.com/v3/
+
+### Accept-Language
+
+Connect returns results in many languages as specified in the Accept-Language header. Accept will return results in en-US (United States Engish) when the Accept-Language header is either unspecified or missing, specifies an invalid language code or an unsupported language code. A list of valid codes may be returing using the https://connect.gettyimages.com/v3/Countries endpoint.
+
+     curl -i -H "Accept-Language:en-US" https://connect.gettyimages.com:443/v3/countrie
 
 ### Authentication
 
