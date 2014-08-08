@@ -68,3 +68,7 @@ The following sample code utilizes the appendApiKeyHeader function defined above
         .success(function (data, textStatus, jqXHR) { /* use image metadata */ })
         .fail(function (data, err) { /* handle errors */ });
     }
+
+### Customers
+
+Accessing the /v3/Customers endpoint from a Javascript client is not supported.
