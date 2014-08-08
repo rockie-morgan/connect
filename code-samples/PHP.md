@@ -148,6 +148,47 @@ Use the authentication/authorization header option in the operations below depen
 
     echo "Countries returned ". json_encode($response["countries"]) . "\n\n\n";
 
+### Customers
+
+    	echo "**********Customers **********\n\n";
+	$endpoint = "https://connect.gettyimages.com/v3/customers";
+
+	$headersToSend = array(CURLOPT_HTTPHEADER => array("Api-Key:".$client_key,
+	            "Authorization: ".$tokenType." ".$token),
+	              CURLOPT_PROXY => "127.0.0.1:8888",
+	              CURLOPT_FOLLOWLOCATION => TRUE); //this lets curl follow the 303
+	
+	
+	$customer = new array( 
+		  "email_address"		=> "jtkirk@ussenterprise.sfc",
+		  "user_name"			=> "jtkirk"
+		  "password"			=> "picard_rules!",
+		  "firstName"			=> "James",
+		  "middleName"			=> "Tiberius",
+		  "lastName"			=> "Kirk",
+		  "billing_country_char3iso"	=> "",
+		  "marketing_email_opt_in"	=> false,
+		  "phone-number" 		=> "2065551212" 
+	);
+
+	$customer_json = json_encode($customer);
+
+	$curl = getCurlForPost($endpoint,$headersToSend);
+                                                                     
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+	    'Content-Type: application/json',                                                                                
+	    'Content-Length: ' . strlen($data_string));
+
+	$response = executeCurl($curl);
+
+	$response = json_decode($response['body'],true);
+
+
+	echo "Download Code: ".$response["http_code"] . "\n";
+	echo "Download Headers: ".$response['header'] . "\n";
+
 ### Helper Functions
 
 ##### executeCurl
