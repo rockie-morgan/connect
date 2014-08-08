@@ -34,10 +34,10 @@ Summarized below are the four authorization grant flows in OAuth 2.0.
 
 | Authorization Grant | Client Environment | Entities Required |
 |:--------------------|:-------------------|:------------------|
-| Implicit Grant | Client-side application, where the application cannot secure the API secret | API key, User ID and password | 
-| Resource Owner Password Credentials | Resource owner has high degree of trust with the client application. | API key and secret, User ID and password |
+| Implicit Grant | Client-side application, where the application cannot secure the API secret | API key, Username and password | 
+| Resource Owner Password Credentials | Resource owner has high degree of trust with the client application. | API key and secret, Username and password |
 | Client Credentials | Client application is also the resource owner. | API key and secret | 
-| Authorization Code\*  | Hosted web application, where client credentials are stored on the web server | API key and secret, User ID and password | 
+| Authorization Code\*  | Hosted web application, where client credentials are stored on the web server | API key and secret, Username and password | 
 \* Connect currently supports Implicit Grant, Resource Owner Password Credentials, and Client Credentials flows.  Authorization Code flow support may be added at a later time.
 
 ### Implicit Grant Flow ###
