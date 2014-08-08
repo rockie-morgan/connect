@@ -25,3 +25,5 @@ Getty Images Connect API Version 3.0
         	- Additional parameters can be provided to specify the download size and product type to download against.
         	- The client application must provide an access token to authorize the download.
         	- You may not have authorization to download for some images in this release, as described above. In this case, v3 responds with HTTP status code 403 Forbidden and an empty response body.
+    - Use this endpoint to create a new Getty Images account.
+    - 	`https://connect.gettyimages.com/v3/customers`
