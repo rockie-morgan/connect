@@ -46,3 +46,24 @@ NOTE: This operation requires an Authorization Header
 This endpoint returns allowed country codes for use with other endpoints. It supports localization.
 
     curl -i -H "Api-Key:{your-api-key}" -H "Accept-Language:en-US" https://connect.gettyimages.com/v3/countries
+
+### Customers
+Thus endpoint creates a new candidate using a JSON file, customers.json, as its POST data.  It supports localiation.
+
+	curl -X -H"Api-Key:t2gw9qk74q69ghgvc6hgn3hr" -H"Accept-Language:en-US" -H"Authorization: Bearer nGnKS1bYYVV6hqlrs+IWl3Lvv...CkxpRElCZz09CjEwMAowCgo=|350" -dcustomer.json "https://connect.gettyimages.com/v3/countries"
+
+The contents of `customers.json`:
+
+	{
+	  "email_address": "jtkirk@ussenterprise.sfc",
+	  "user_name": "jtkirk"
+	  "password": "picard_rules!",
+	  "firstName": "James",
+	  "middleName": "Tiberius",
+	  "lastName": "Kirk",
+	  "billing_country_char3iso": "",
+	  "marketing_email_opt_in": false,
+	  "phone-number": "2065551212"
+	}
+
+
